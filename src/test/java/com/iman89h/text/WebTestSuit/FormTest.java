@@ -6,15 +6,16 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+
 
 public class FormTest extends BaseTest
 {
+    protected Menu menu;
     @Test
     public void FormValidationErrorsDisplayed()
     {
         //Arrange
-        Menu menu = new Menu(driver);
+        menu = new Menu(driver);
         menu.clickForms();
         FormsPage formsPage = new FormsPage(driver);
 
@@ -31,7 +32,7 @@ public class FormTest extends BaseTest
     public void SubmitFormAndConfirmThanksMessage()
     {
         //Arrange
-        Menu menu = new Menu(driver);
+        menu = new Menu(driver);
         menu.clickForms();
         FormsPage formsPage = new FormsPage(driver);
 
